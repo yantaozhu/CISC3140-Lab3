@@ -2,7 +2,7 @@ const db = connect('localhost/squirreldata');
 
 db.squirrels.insertMany([
     { squirrel_id: 1, time: 'AM', date: 10012023, age: 'Adult', primary_fur_color: 'Gray', highlight_fur_color: 'White', nearby_building: 'Library', above_ground: true},
-    { squirrel_id: 2, time: 'AM', date: 10012023, age: 'Juvenile', primary_fur_color: 'Cinnamon', highlight_fur_color: 'White', nearby_building: 'Inger Hall', above_ground: false},
+    { squirrel_id: 2, time: 'AM', date: 10012023, age: 'Juvenile', primary_fur_color: 'Cinnamon', highlight_fur_color: 'White', nearby_building: 'Ingersoll Hall', above_ground: false},
     { squirrel_id: 3, time: 'PM', date: 10022023, age: 'Adult', primary_fur_color: 'Black', highlight_fur_color: '', nearby_building: 'Boylan Hall', above_ground: true},
     { squirrel_id: 4, time: 'AM', date: 10032023, age: 'Adult', primary_fur_color: 'Gray', highlight_fur_color: '', nearby_building: '', above_ground: false},
     { squirrel_id: 5, time: 'AM', date: 10032023, age: 'Adult', primary_fur_color: 'Gray', highlight_fur_color: 'Cinnamon', nearby_building: 'Library', above_ground: false},
