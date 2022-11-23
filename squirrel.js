@@ -1,6 +1,13 @@
 const mongoose = require('mongoose');
 
-const SquirrelSchema = new mongoose.Schema({
+const Schema = mongoose.Schema;
+
+const SquirrelSchema = new Schema({
+    squirrel_id: {
+        type: Number,
+        required: true,
+        unique: true,
+    },
     time: {
         type: String,
     },
@@ -24,4 +31,6 @@ const SquirrelSchema = new mongoose.Schema({
     },
 });
 
-module.exports = mongoose.model('squirrel',SquirrelSchema);
+const Squirrel = mongoose.model('squirrel',SquirrelSchema);
+
+module.exports = Squirrel;
