@@ -1,5 +1,6 @@
 #! /bin/bash
 
+# Check if MongoDB is installed. If not, install MongoDB.
 if [[ $(mongod --version) ]]; then
     echo "MongoDB is installed"
 else
@@ -21,3 +22,15 @@ else
     brew install mongodb-community@6.0
 fi
 
+# Create local database
+echo "Creating local database"
+mongosh squirrelData.js
+
+# Install dependencies for API server
+echo "Installing dependencies for API server"
+npm install express --save
+npm install mongoose --save
+
+# Starting the local server
+echo "Starting the local server for localhost testing of API"
+node index
